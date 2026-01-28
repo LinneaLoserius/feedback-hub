@@ -6,6 +6,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "feedback-hub",
 	"main": "src/index.ts",
+	"ai": { "binding": "AI" },
 	"compatibility_date": "2025-09-27",
 	"compatibility_flags": [
 		"global_fetch_strictly_public"
@@ -16,7 +17,14 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "feedback_db",
+			"database_id": "58ba2594-0765-4b28-b15f-ac0e1130f59d",
+		}
+	]
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
